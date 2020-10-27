@@ -63,7 +63,7 @@ class Actors {
         ],
         '6' => [
             'id' => 6,
-            'name' => 'P.O',
+            'name' => 'MINO',
             'age' =>'27',
             'city' =>'Seoul',
             'positioning in the program' =>'Rapper.',

@@ -1,89 +1,15 @@
 <?php
 namespace App\Models;
+use App\Models\Simple\JSONModel; 
 
 /*
  * Mock travel destination data.
  * Note that we don't have to extend CodeIgniter's model for now
  */
 
-class Actors {
-
-    //mock data : an array of records
-    protected $data = [
-        '1' => [
-            'id' => 1,
-            'name' => 'Kang Ho Dong',
-            'age' =>'50',
-            'city' =>'Jinzhou city, South Gyeongsang Road',
-            'positioning in the program' =>'The eldest brother',
-            'program description' => 'The program mode of the eighth season of The New Journey to the West is the game completion mode.',
-            'personal introduction' =>' Kang Ho Dong,born on June 11, 1970, South Korea, comedian, former professional wrestler, graduated from mashan business institutions of higher learning.',
-            'image' => 'jiang.jpg',
-        ],
-        '2' => [
-            'id' => 2,
-            'name' => 'Lee Soo keun',
-            'age' =>'45',
-            'city' =>'Yeongpyeong, Gyeonggi Province, South Korea',
-            'positioning in the program' =>'Vivacious',
-            'program description' => 'The program mode of the eighth season of The New Journey to the West is the game completion mode.',
-            'personal introduction' =>' Lee Soo keun, born on February 10, 1975, graduated from Yu Ruiyi university, South Korea comedian, host.',
-            'image' => 'lee.jpg',
-        ],
-       
-        '3' => [
-            'id' => 3,
-            'name' => 'Eun Ji Won',
-            'age' =>'42',
-            'city' =>'Seoul',
-            'positioning in the program' =>'Interesting people',
-            'program description' => 'The program mode of the eighth season of The New Journey to the West is the game completion mode.',
-            'personal introduction' =>' Eun Ji Won，born on June 8, 1978, Korean singer, host, an actress.Captain of the boy band Crystal Boys.',
-            'image' => 'g1.jpg',
-        ],
-         '4' => [
-            'id' => 4,
-            'name' => 'Cho Kyu Hyun',
-            'age' =>'32',
-            'city' =>'Seoul',
-            'positioning in the program' =>'A person who sings well.',
-            'program description' => 'The program mode of the eighth season of The New Journey to the West is the game completion mode.',
-            'personal introduction' =>'  Cho Kyu Hyun, born on February 3, 1988, is a South Korean male singer, host and musical musical actor. ',
-            'image' => 'gue.jpg',
-        ],
-        '5' => [
-            'id' => 5,
-            'name' => 'P.O',
-            'age' =>'27',
-            'city' =>'Seoul',
-            'positioning in the program' =>'Rapper.',
-            'program description' => 'The program mode of the eighth season of The New Journey to the West is the game completion mode.',
-            'personal introduction' =>'P.O., a member of the seven-member Hip Hop boy band Block B, nurtured by South Korean producer and singer Cho PD, belongs to the Seven Seasons agency. ',
-            'image' => 'po.jpg',
-        ],
-        '6' => [
-            'id' => 6,
-            'name' => 'MINO',
-            'age' =>'27',
-            'city' =>'Seoul',
-            'positioning in the program' =>'Rapper.',
-            'program description' => 'The program mode of the eighth season of The New Journey to the West is the game completion mode.',
-            'personal introduction' =>'Song Minhao (MINO),born in South Korea on March 30, 1993, South Korean male singer, actor, host, man singing group WINNER.',
-            'image' => 'mino.jpg',
-        ],
-        
-    ];
-
-    public function findAll() {
-        return $this->data;
-    }
-
-    public function find($id = null) {
-        if (!empty($id) && isset($this->data[$id])) {
-            return $this->data[$id];
-        }
-        return null;
-    }
+class Actors extends JSONModel {
+ protected $origin = WRITEPATH . 'data/actorsData.json'; 
+ protected $keyField = 'id'; protected $validationRules = []; 
 
 }
 

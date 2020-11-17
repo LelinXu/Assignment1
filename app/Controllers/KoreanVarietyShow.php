@@ -25,8 +25,8 @@ class KoreanVarietyShow extends BaseController {
              $table->setTemplate($template);
              $fields = 
                 [
-                   'title' => 'Korean Variety Show Destinations',
-                   'heading' => 'Korean Variety Show Destinations',
+                   'title' => 'Korean Variety Show ',
+                   'heading' => 'Korean Variety Show',
                    'footer' => 'Copyright lelinXu'
                 ];
              return $parser->setData($fields)
@@ -62,8 +62,8 @@ class KoreanVarietyShow extends BaseController {
              $table->setTemplate($template);
              $fields = 
                 [
-                   'title' => 'Korean Variety Show Destinations',
-                   'heading' => 'Korean Variety Show Destinations',
+                   'title' => 'Korean Variety Show ',
+                   'heading' => 'Korean Variety Show',
                    'footer' => 'Copyright lelinXu'
                 ];
              return $parser->setData($fields)
